@@ -1,7 +1,7 @@
 let humanScore = 0;
 let computerScore = 0;
 
-
+//Create the computerchoice based on an random number between 0 and incl. 2
 function getComputerChoice(){
     let choice = parseInt(Math.random() * 3);
 
@@ -20,8 +20,10 @@ function getComputerChoice(){
     }
 }
 
+//Humanchoice: returns the value based on a number the player gets prompted
 function getHumanChoice(){
     let choice = parseInt(prompt("choose: Rock(0), Paper(1) or Scissor(2)"));
+
     if(choice === 0){
         return "rock";
     }
@@ -33,6 +35,7 @@ function getHumanChoice(){
     }
 }
 
+//checks the winning conditions and keeps track of who won
 function playRound(humanChoice, computerChoice){
     if(humanChoice === computerChoice){
         console.log("It is a tie! You both had "+humanChoice);
