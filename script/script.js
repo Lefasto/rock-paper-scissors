@@ -52,7 +52,24 @@ function playRound(humanChoice, computerChoice){
     }
 
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+//calls playRound() for five times and declares the winner after 5 rounds
+function playGame(){
+    for(let i = 0; i < 5; i++){
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection);
+    }
+    if(humanScore === computerScore){
+        console.log("You both have "+humanScore+ " points!");
+    }
+    else if(humanScore > computerScore){
+        console.log("You win! "+humanScore+"/"+computerScore);
+    }
+    else{
+        console.log("You lose! "+computerScore+"/"+humanScore);
+    }
+}
+
+playGame();
