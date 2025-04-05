@@ -7,13 +7,13 @@ function getComputerChoice(){
 
     switch(choice){
         case 0:
-            return "Rock";
+            return "rock";
             break;
         case 1:
-            return "Paper";
+            return "paper";
             break;
         case 2:
-            return "Scissor";
+            return "scissor";
             break;
         default:
             break;
@@ -21,7 +21,17 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-    //TODO
+    let choice = parseInt(prompt("choose: Rock(0), Paper(1) or Scissor(2)"));
+    if(choice === 0){
+        return "rock";
+    }
+    else if(choice === 1){
+        return "paper";
+    }
+    else if(choice === 2){
+        return "scissor";
+    }
 }
 
 console.log(getComputerChoice());
+console.log(getHumanChoice());
